@@ -7,6 +7,12 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
 
+puts 'Clearing old data...'
+Article.destroy_all
+
+puts 'Seeding Articles...'
 10.times do
   Article.create!(title: Faker::Book.title, content: Faker::Quote.famous_last_words)
 end
+
+puts 'Done!'
