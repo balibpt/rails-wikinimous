@@ -2,6 +2,8 @@
   Wikinimous
 </h1>
 
+<%= link_to "Create New Article", articles_new_path %>
+
 <ul>
   <% @articles.each do |article| %>
     <li><%= link_to article.title, "articles/#{article.id}" %></li>
